@@ -25,13 +25,14 @@ pipeline {
                 echo "Package the code"
                 sh "mvn package"
             }
+        }
         stage('code coverage') {//dev
         agent any
             steps {
                 echo "verify the code"
                 sh "mvn verify"
             }
-        }
+        
         }
     }
 }
