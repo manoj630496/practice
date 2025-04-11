@@ -12,14 +12,14 @@ pipeline {
                 sh "mvn compile"
             }
         }
-         stage('UnitTest') { //test
+        stage('UnitTest') { //test
          agent any
             steps {
                 echo "Test the code"
                 sh "mvn test"
             }
         }
-         stage('Package') {//dev
+        stage('Package') {//dev
         agent any
             steps {
                 echo "Package the code"
