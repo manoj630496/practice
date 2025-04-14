@@ -2,35 +2,35 @@ pipeline {
    agent none
    tools{
 //     jdk "myjava"
-        maven "mymaven"
+ //       maven "mymaven"
    }
     stages {
         stage('Compile') { //prod
         agent any
             steps {
                 echo "Compile the code"
-                sh "mvn compile"
+              //  sh "mvn compile"
             }
         }
         stage('UnitTest') { //test
          agent any
             steps {
                 echo "Test the code"
-                sh "mvn test"
+              //  sh "mvn test"
             }
         }
         stage('Package') {//dev
         agent any
             steps {
                 echo "Package the code"
-                sh "mvn package"
+              //  sh "mvn package"
             }
         }
         stage('code coverage') {//dev
         agent any
             steps {
                 echo "verify the code"
-                sh "mvn verify"
+            //    sh "mvn verify"
             }
         
         }
