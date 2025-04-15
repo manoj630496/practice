@@ -34,5 +34,13 @@ pipeline {
             }
         
         }
+        stage('publish') {//dev
+        agent any
+            steps {
+                echo "publish the code"
+            //    sh "mvn verify"
+            }
+        
+        }
     }
 }
